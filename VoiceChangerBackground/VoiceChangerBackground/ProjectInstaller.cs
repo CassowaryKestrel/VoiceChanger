@@ -20,5 +20,10 @@ namespace VoiceChangerBackground
         {
 
         }
+
+        private void serviceProcessInstaller1_AfterInstall(object sender, InstallEventArgs e)
+        {
+
+        }
     }
 }

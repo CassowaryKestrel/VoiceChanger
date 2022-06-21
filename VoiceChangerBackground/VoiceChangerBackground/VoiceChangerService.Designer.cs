@@ -29,17 +29,8 @@ namespace VoiceChangerBackground
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.eventLog1 = new System.Diagnostics.EventLog();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 640);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // eventLog1
             // 
@@ -54,7 +45,6 @@ namespace VoiceChangerBackground
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Diagnostics.EventLog eventLog1;
+        public System.Diagnostics.EventLog eventLog1;
     }
 }

@@ -14,23 +14,26 @@ namespace VoiceChangerBackground
 {
     public partial class VoiceChangerService : ServiceBase
     {
+        private int eventId = 1;
+
         public VoiceChangerService()
         {
             InitializeComponent();
-
-            eventLog1 = new System.Diagnostics.EventLog();
-            if(!System.Diagnostics.EventLog.SourceExists("VoiceChanger"))
-            {
-                System.Diagnostics.EventLog.CreateEventSource("VoiceChanger", "VoiceChangerLog");
-            }
-
-            eventLog1.Source = "VoiceChanger";
-            eventLog1.Log = "VoiceChangerLog";
 
         }
 
         protected override void OnStart(string[] args)
         {
+            eventLog1 = new System.Diagnostics.EventLog();
+            if (!System.Diagnostics.EventLog.SourceExists("Voice Changer"))
+            {
+                System.Diagnostics.EventLog.CreateEventSource("Voice Changer", "Voice Changer Log");
+            }
+
+            eventLog1.Source = "Voice Changer";
+            eventLog1.Log = "Voice Changer Log";
+
+
             // Update the service state to Start Pending.
             ServiceStatus serviceStatus = new ServiceStatus();
             serviceStatus.dwCurrentState = ServiceState.SERVICE_START_PENDING;
@@ -51,7 +54,15 @@ namespace VoiceChangerBackground
 
         protected override void OnStop()
         {
-            eventLog1.WriteEntry("In OnStop.");
+            // Update the service state to Stop Pending.
+            ServiceStatus serviceStatus = new ServiceStatus();
+            serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING;
+            serviceStatus.dwWaitHint = 100000;
+            SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+
+            // Update the service state to Stopped.
+            serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED;
+            SetServiceStatus(this.ServiceHandle, ref serviceStatus);
         }
 
         protected override void OnContinue()

@@ -34,13 +34,17 @@ namespace VoiceChangerBackground
             // 
             // serviceProcessInstaller1
             // 
+            this.serviceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.serviceProcessInstaller1.Password = null;
             this.serviceProcessInstaller1.Username = null;
+            this.serviceProcessInstaller1.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceProcessInstaller1_AfterInstall);
             // 
             // serviceInstaller1
             // 
             this.serviceInstaller1.Description = "Voice Changer Background Service";
+            this.serviceInstaller1.DisplayName = "Voice Changer Display Name";
             this.serviceInstaller1.ServiceName = "VoiceChanger";
+            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             this.serviceInstaller1.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller1_AfterInstall);
             // 
             // ProjectInstaller
@@ -52,8 +56,7 @@ namespace VoiceChangerBackground
         }
 
         #endregion
-
-        private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
-        private System.ServiceProcess.ServiceInstaller serviceInstaller1;
+        public System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
+        public System.ServiceProcess.ServiceInstaller serviceInstaller1;
     }
 }
