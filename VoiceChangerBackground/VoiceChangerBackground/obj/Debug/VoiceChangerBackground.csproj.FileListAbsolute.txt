@@ -1,0 +1,9 @@
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\obj\Debug\VoiceChangerBackground.csproj.AssemblyReference.cache
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\obj\Debug\VoiceChangerBackground.Service1.resources
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\obj\Debug\VoiceChangerBackground.csproj.GenerateResource.cache
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\obj\Debug\VoiceChangerBackground.csproj.CoreCompileInputs.cache
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\bin\Debug\VoiceChangerBackground.exe.config
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\bin\Debug\VoiceChangerBackground.exe
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\bin\Debug\VoiceChangerBackground.pdb
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\obj\Debug\VoiceChangerBackground.exe
+C:\Dev\VoiceChanger\VoiceChangerBackground\VoiceChangerBackground\obj\Debug\VoiceChangerBackground.pdb

@@ -17,7 +17,7 @@ namespace VoiceChangerBackground
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new VoiceChangerService()
             };
             ServiceBase.Run(ServicesToRun);
         }
